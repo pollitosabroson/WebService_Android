@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21/08/2012 05:48:11 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="org.hibernate.model.Vuelos" table="vuelos" catalog="bdvuelos">
+        <id name="idVuelo" type="java.lang.Integer">
+            <column name="Id_vuelo" />
+            <generator class="identity" />
+        </id>
+        <property name="ciudadOrigen" type="string">
+            <column name="Ciudad_origen" length="50" not-null="true" />
+        </property>
+        <property name="ciudadDestino" type="string">
+            <column name="Ciudad_destino" length="50" not-null="true" />
+        </property>
+        <property name="horaSalida" type="string">
+            <column name="Hora_salida" length="50" not-null="true" />
+        </property>
+        <property name="horaLlegada" type="string">
+            <column name="Hora_llegada" length="50" not-null="true" />
+        </property>
+        <property name="idAvion" type="int">
+            <column name="Id_avion" not-null="true" />
+        </property>
+        <property name="idReservacion" type="int">
+            <column name="Id_reservacion" not-null="true" />
+        </property>
+        <property name="preciosNinos" type="double">
+            <column name="PreciosNinos" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="precioAdultos" type="double">
+            <column name="PrecioAdultos" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

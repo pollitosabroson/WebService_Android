@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21/08/2012 05:48:11 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="org.hibernate.model.Clientes" table="clientes" catalog="bdvuelos">
+        <id name="idCliente" type="java.lang.Integer">
+            <column name="Id_cliente" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="Nombre" length="30" not-null="true" />
+        </property>
+        <property name="APaterno" type="string">
+            <column name="A_paterno" length="30" not-null="true" />
+        </property>
+        <property name="AMaterno" type="string">
+            <column name="A_materno" length="30" not-null="true" />
+        </property>
+        <property name="sexo" type="string">
+            <column name="Sexo" length="30" not-null="true" />
+        </property>
+        <property name="edad" type="int">
+            <column name="Edad" not-null="true" />
+        </property>
+        <property name="cantidadDeNinos" type="int">
+            <column name="CantidadDeNinos" not-null="true" />
+        </property>
+        <property name="cantidadDeAdultos" type="int">
+            <column name="CantidadDeAdultos" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

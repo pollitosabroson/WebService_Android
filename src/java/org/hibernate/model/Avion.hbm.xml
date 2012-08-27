@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21/08/2012 05:48:11 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="org.hibernate.model.Avion" table="avion" catalog="bdvuelos">
+        <id name="idAvion" type="java.lang.Integer">
+            <column name="Id_avion" />
+            <generator class="identity" />
+        </id>
+        <property name="capacidad" type="int">
+            <column name="Capacidad" not-null="true" />
+        </property>
+        <property name="idReservacion" type="int">
+            <column name="Id_reservacion" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
